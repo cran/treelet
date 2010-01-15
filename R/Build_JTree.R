@@ -34,7 +34,7 @@ dim_C=dim(C)[1];   #dim of C, which is supposed to be a square matrix
   # J=maxlevel;
 #}
 
-J=dim_C-1;
+J=maxlevel;
 
 #Create relative matrix
 
@@ -159,7 +159,7 @@ T[[lev]]=R;                 #rotation angle
 #C=newJacobi$Cnew;
 #cc=newJacobi$ccnew;
 
-Z[lev,]=compno;  #nodes that are merged
+Z[lev,]=nodes[compno];  #nodes that are merged
 
 pind=compno[idx];
 p1=pind[1];
@@ -179,7 +179,7 @@ all_d[lev,]=t(dlabels);
 all_nodes[lev,]=nodes;
 }
 
-return(list(Zpos=Zpos,T=T,PCidx=PCidx,all_nodes=all_nodes,theta=theta,PC_ratio=PC_ratio,Z=Z,all_d=all_d,C=C,cc=cc))
+return(list(Z=Z,Zpos=Zpos,T=T,PCidx=PCidx,all_nodes=all_nodes,theta=theta,PC_ratio=PC_ratio,Z=Z,all_d=all_d,C=C,cc=cc))
 
 }
 

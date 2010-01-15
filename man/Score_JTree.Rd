@@ -10,7 +10,7 @@ Score_JTree(X, K, TrainIdx, TestIdx)
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
-  \item{X}{ data matrix (each row is an observation)}
+  \item{X}{ data matrix (each row is an observation) }
   \item{K}{ number of vectors in final representation}
   \item{TrainIdx}{indices for train data (for building the tree)}
   \item{TestIdx}{indices for test data (for computing a score) }
@@ -19,24 +19,23 @@ Score_JTree(X, K, TrainIdx, TestIdx)
  Remark: Compare this function with Run\_JTree
 }
 \value{
- ~Describe the value returned
  
   \item{levels }{at each level}
   \item{scores }{what the score is at the corresponding level}
   \item{Zpos }{Zpos[dim-1,2]   positions of the two clusters merged;  number between 1 and d (the length of the comp vector)}
-  \item{ PCidx }{ID of prinicipal components; [1 2] or [2 1]}
+  \item{ PCidx }{ID of principal components; [1 2] or [2 1]}
   \item{ T}{Element T\{k\} in the list array contains a 2-by-2 rot matrix }
   \item{all\_nodes }{node labels }
   
 }
-\author{Ann Lee, Di Liu}
+
 
 \examples{
 N=1000;
 dim_x=10;
 sigma_x=1;
 
-
+set.seed(100)
 s1_2=290;
 s2_2=300;
 c1=-0.3;

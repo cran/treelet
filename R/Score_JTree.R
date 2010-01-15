@@ -1,5 +1,3 @@
-
-
 Score_JTree=function(X,K,TrainIdx,TestIdx){
 
 # The function computes the scores for the best K basis, for each level of the tree
@@ -21,23 +19,20 @@ dim_Xtrain=dim(Xtrain)[2];
 #covarice and correlation matrix
 print("computing correlations for training data......")
 
-out_C=Get_C(Xtrain);
-C=out_C$C;
-cc=out_C$cc;
+C=var(Xtrain);
+cc=cor(Xtrain);
 
 #run treelet algorithm
 maxlev=dim_Xtrain-1;  # the maximum of levels is # covariates -1
-
+print("Building the tree......")
 out_train=Build_JTree(C,cc,maxlev);# Please refer to the function Build_JTree for the returned values
 
-print("Building the tree......")
 ##################################
 #computing scores on testing data
 ##################################
-
+print("Geting the score on testing data......")
 Xtest=X[TestIdx,];
 out=JTree_Scores(Xtest, K,out_train$Zpos,out_train$T,out_train$PCidx,maxlev,out_train$all_nodes);
-print("Geting the score on testing data......")
 scores=out$scores;
 levels=out$levels;
 

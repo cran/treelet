@@ -1,5 +1,3 @@
-
-
 JTree_Scores=function(X, K, Zpos,T,PCidx,maxlev,all_nodes){
 
 #Calculates scores for the "best K-basis" at each level of the tree
@@ -44,7 +42,7 @@ for (lev in 1:maxlev){# loop through the levels
        nodes=nodes[which(nodes>0)];
 
   tmp=rbind(diag(rep(1,m)),sums);
-  basis=rbind(tmp[nodes,],flip(difs[1:lev,]));
+  basis=rbind(tmp[nodes,],difs[lev:1,]);
 
 #score the best K-basis
   out_E=Calc_Energy(X,basis,K,av_norm);

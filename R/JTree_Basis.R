@@ -1,4 +1,3 @@
-
 JTree_Basis=function(Zpos,T,PCidx,maxlev,all_nodes){
 
 # input please refer to the output of Build_JTree
@@ -44,7 +43,7 @@ for (lev in 1:maxlev){
 #}
 #else {
   tmp=rbind(diag(rep(1,m)),sums);
-  basis=rbind(tmp[nodes,],flip(difs));
+  basis=rbind(tmp[nodes,],difs[maxlev:1,]);
 #}
 
 return(list(basis=basis,sums=sums,difs=difs));

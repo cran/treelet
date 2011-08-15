@@ -1,0 +1,15 @@
+20a71997fea5cf35170c7ab504321392 *DESCRIPTION
+7155aadaf3b6e1e308a1ac5024fe273f *R/Build_JTree.R
+0958848fe8f2f221c12c11ae94f7a469 *R/Calc_Energy.R
+ce74efb5f356649c1c612d44a914c7e5 *R/JTree_Basis.R
+dbb388c89f4b8f8bc040c826d807e763 *R/JTree_Scores.R
+afab556f4cdcbe06114c88086b3a04e6 *R/Run_JTree.R
+cf7fc7b89b45aad299a70800585ff01c *R/Score_JTree.R
+c9e8abf527f4993b399e69f599c007c0 *R/draw_tree.R
+dbc5e1e20d80ba1eb167c9c53e32e937 *man/Build_JTree.Rd
+a38cb981af8965c5a47b8756c35fd8cc *man/Calc_Energy.Rd
+afde03c55cae206fc27396e884b12d1c *man/JTree_Basis.Rd
+c9eecfdefe4842444f4e67d7ecf8e2bd *man/JTree_Scores.Rd
+e220ac436cc826bc69b71756ddfde482 *man/Run_JTree.Rd
+6c349cdd24f6ff722268cbc631868961 *man/Score_JTree.Rd
+b7c105f18157f891075421947313c5be *man/draw_tree.Rd

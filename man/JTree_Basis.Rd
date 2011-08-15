@@ -2,7 +2,7 @@
 \alias{JTree_Basis}
 %- Also NEED an '\alias' for EACH other topic documented here.
 \title{ Calculates the basis for the Jacobi tree algorithm (one or more iterations)}
-\description{Jacobi algorithm
+\description{
 }
 \usage{
 JTree_Basis(Zpos, T, PCidx, maxlev, all_nodes)
@@ -20,7 +20,7 @@ JTree_Basis(Zpos, T, PCidx, maxlev, all_nodes)
   \item{basis}{Basis functions entered ROW-WISE --- coarse-to-fine where m is the dimension of the data}
   \item{sums}{Part of basis funcs of subspaces V1,...,V\_\{m-1\}---- entered rowwise (fine-to-coarse)}
   \item{difs}{ Basis funcs of subspaces W1,...,W\_\{m-1\}---- entered rowwise (fine-to-coarse)}
-  
+  \item{basis\_cov}{Basis functions --- entered COLUMNWISE,in the same order as in the computed covariance matrix}
 }
 
 

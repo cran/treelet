@@ -1,6 +1,6 @@
 Package: treelet
-Version: 0.2-0
-Date: 2010-01-15
+Version: 0.3-0
+Date: 2011-08-15
 Title: Treelet
 Author: Di Liu <diliu@andrew.cmu.edu>
 Maintainer: Di Liu <diliu@andrew.cmu.edu>
@@ -10,6 +10,6 @@ Description: a novel construction of multi-scale bases that extends
         a multi-scale orthonormal basis which both reflect the internal
         structure of the data.
 License: GPL (>= 2)
-Packaged: 2010-02-09 15:43:19 UTC; diliu
+Packaged: 2010-02-05 17:11:57 UTC; diliu
 Repository: CRAN
-Date/Publication: 2010-02-09 16:23:51
+Date/Publication: 2011-09-01 06:36:51

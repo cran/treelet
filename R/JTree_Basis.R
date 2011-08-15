@@ -8,6 +8,9 @@ JTree_Basis=function(Zpos,T,PCidx,maxlev,all_nodes){
 #                    ---- entered rowwise (fine-to-coarse)
 #   difs(J,m)      Basis funcs of subspaces W1,...,W_{m-1}        
 #                    ---- entered rowwise (fine-to-coarse)
+#  basis_cov(m,m)  Basis functions 
+#                    ---- entered COLUMN-WISE,in the same order #as in the computed covariance matrix
+                  
 
 J=dim(Zpos)[1];
 
@@ -45,6 +48,8 @@ for (lev in 1:maxlev){
   tmp=rbind(diag(rep(1,m)),sums);
   basis=rbind(tmp[nodes,],difs[maxlev:1,]);
 #}
+basis_cov = t(tmpfilts)
 
-return(list(basis=basis,sums=sums,difs=difs));
+
+return(list(basis=basis,sums=sums,difs=difs, basis_cov=basis_cov));
 }

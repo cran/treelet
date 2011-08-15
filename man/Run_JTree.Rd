@@ -26,6 +26,9 @@ Run_JTree(X, maxlev, drawTree)
   \item{T}{Element in the list array contains a 2-by-2 rot matrix }
   \item{all\_nodes}{ node labels }
   \item{Z}{indices of clusters that are merged}
+  \item{C\_old}{the covariance matrix}
+  \item{cc\_old}{the old correlation matrix}
+  \item{basis\_cov}{the same as the basis\_cov as returned by JTree_Basis}
 }
 
 
@@ -54,8 +57,10 @@ k=1;
 maxlev=dim(X)[2]-k;
 output=Run_JTree(X,maxlev);
 # Display the output image
+#library(matlab)
+#imagesc(output$basis)
 #Display the output in tree structure
-draw_tree(output)
+#draw_tree(output)
 }
 % Add one or more standard keywords, see file 'KEYWORDS' in the
 % R documentation directory.

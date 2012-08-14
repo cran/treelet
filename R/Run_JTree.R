@@ -1,15 +1,25 @@
-Run_JTree=function(X,maxlev, drawTree=FALSE){
-print("computing the Correlation....")
-C=var(X);
-cc=cor(X);
-print("building the tree......")
-maxTree=Build_JTree(C,cc,maxlev);
-print("computing the basis for the level......")
-out=JTree_Basis(maxTree$Zpos,maxTree$T,maxTree$PCidx,maxlev,maxTree$all_nodes);
-C_old=C
-cc_old=cc
-if(drawTree=="TRUE" & maxlev==(dim(X)[2]-1)){
-	draw_tree(maxTree)
+Run_JTree <-
+function(X, maxlev,whichsave){
+
+if(maxlev>=ncol(X)){
+
+	message("can only compute up to p-1 merges")
+
+	} else{
+
+    message("computing the Correlation....")
+	C = X
+	cc = cov2cor(C)
+    message("building the tree......")
+    maxTree = Build_JTree(C, cc, maxlev,whichsave)
+    message("computing the basis for the level......")
+    out = JTree_Basis(maxTree$Zpos, maxTree$T, maxTree$PCidx, 
+        maxlev, maxTree$all_nodes,whichsave)
+
+        return(list(basis = out$basis, Zpos = maxTree$Zpos, 
+        T = maxTree$T, PCidx = maxTree$PCidx, 
+        all_nodes = maxTree$all_nodes, TreeCovs=maxTree$TreeCovs))
+
+	}
 }
-return(list(basis=out$basis,sums=out$sums,difs=out$difs,Z=maxTree$Z,Zpos=maxTree$Zpos,T=maxTree$T,PCidx=maxTree$PCidx,all_nodes=maxTree$all_nodes, C_old=C_old, cc_old=cc_old, basis_cov=out$basis_cov))
-}
+

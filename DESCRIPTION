@@ -1,15 +1,19 @@
 Package: treelet
-Version: 0.3-0
-Date: 2011-08-15
-Title: Treelet
-Author: Di Liu <diliu@andrew.cmu.edu>
-Maintainer: Di Liu <diliu@andrew.cmu.edu>
-Depends: R (>= 2.10.0), ape
-Description: a novel construction of multi-scale bases that extends
-        wavelets to non-smooth signals. Returns a hierarchical tree and
-        a multi-scale orthonormal basis which both reflect the internal
-        structure of the data.
+Type: Package
+Title: Treelets - an adaptive multi-scale basis for high-dimensional,
+        sparse and unordered data
+Version: 1.0
+Date: 2012-08-14
+Author: Di Liu and Trent Gaugler
+Maintainer: Trent Gaugler <tgaugler@andrew.cmu.edu>
+Description: Treelets provides a novel construction of multi-scale
+        bases that extends wavelets to non-smooth signals. It returns a
+        multi-scale orthonormal basis, where the final computed basis
+        functions are supported on nested clusters in a hierarchical
+        tree.  Both the tree and the basis, which are constructed
+        simultaneously, reflect the internal structure of the data.
 License: GPL (>= 2)
-Packaged: 2010-02-05 17:11:57 UTC; diliu
+LazyLoad: yes
+Packaged: 2012-08-15 18:09:52 UTC; trent
 Repository: CRAN
-Date/Publication: 2011-09-01 06:36:51
+Date/Publication: 2012-08-15 18:54:25

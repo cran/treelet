@@ -38,7 +38,7 @@ Note that with the exception of \code{maxlev} and \code{whichsave}, the argument
 Lee, AB, Nadler, B, Wasserman, L (2008).  Treelets - an adaptive multi-scale basis for sparse unordered data. The Annals of Applied Statistics 2: 435-471. \url{http://www.stat.cmu.edu/~annlee/AOAS137.pdf}
 }
 \author{
-Trent Gaugler \email{tgaugler@andrew.cmu.edu}
+Trent Gaugler \email{gauglert@lafayette.edu}
 }
 %\note{
 %%%  ~~further notes~~

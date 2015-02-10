@@ -22,4 +22,3 @@ if(maxlev>=ncol(X)){
 
 	}
 }
-

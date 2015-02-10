@@ -4,4 +4,3 @@ function(basis, cov, lambda){
 	smooth=basis%*%cov%*%t(basis)
 	return(smooth)	
 }
-
